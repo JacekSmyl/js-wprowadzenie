@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // boolean - wartości logiczne : true albo false (słowa kluczowe)
+      let flag = true;
+      if (flag == true) {
+        console.log("prawda!");
+      }
+      if (flag == false) {
+        // nie wykona się bo flag ma true
+        console.log("prawda");
+      }
+      if (flag) console.log("skrótowo i prawda"); // sprawdzenie skrutowo czy flag jet true
+      //wykrzyknik odwraca wartość logiczną
+      // odwaracamy i sprawdzamy czy jest false
+      flag = false;
+     if (!flag) console.log("Skrótowo i fałsz!");
+        console.log(true)//true
+        console.log(!true)// false odwrócona przez !
+        console.log(false)//false 
+        console.log(!false)// true odwrócona przez !
+
+if (4 >1){// wynikiem jest true czyli if się wykoma 
+console.log("4>1");
+}
+
+
+// falsey values= "fałszywe wartości"
+ let data= "";
+ if (data){// data będzie zamieniona na wartość boolean
+            // nazywamy to konwersją z  jednego typu wartości na inny
+            // pusty  string skonwertowany na boolean czyli fałsz
+
+    console.log("prawda");
+ }
+  let data2= "tekst"; //truthly vaues 
+ if (data2){// data będzie zamieniona na wartość boolean
+            // nazywamy to konwersją z  jednego typu wartości na inny
+            // wypełniony string skonwertowany na boolean czyli prawda
+            // wy
+
+    console.log("prawda");
+ }
+// posty string ""
+// 0,-1
+//0n BigInt,
+//NaN,
+//null
+//undefined
+//false
+
+let data3 = 0;
+if (data3) {// null skonwertowany na false
+ console.log("Data3 ma wartość true");
+} else 
+console.log("Data3 ma wartośc false ")
+
+
+
+
+// truthly value- "prawdziwe wartości "
+// te wartości konwertuja na true
+// "tekst"
+// -1, 1, 34 liczby różne od zera
+//[], [4,3,2], [flse, false]- tablice
+//{}, {a:1}, window 
+// function test(){}
+
+ let test = "tekst"
+ if (true) console.log("prawda", test);
+
+ // 5;56
+ 
+
+
+    </script>
+  </body>
+</html>

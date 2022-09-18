@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ///// operatory przypisania
+
+      let a = 10; // operator przypisania
+      a += 5; // operator przypisania  oraz arytmetyczny , dodanie do a 5 i przypisanie
+      a -= 3; // odjecie od a 3 i przypisanie
+      a *= 2; // pomnożenie przez 2 i przypisanie;
+      a /= 3; // podzielenie przez 3 i przypisanie
+      a %= 5; // reszta z dzielnia przez 5 i przypisanie
+      a **= 3; //3 - potęga , wynik 27
+      console.log(a); //27
+
+      ////// operatory arytmetyczne
+      let b;
+      b = 3 + 5; // 8
+      b = 7 - 3; // 4
+      b = 4 * 2; // 8
+      b = 6 / 3; // 3
+
+      b++; // operator  inkrementacji, zwiększa o  jeden zmieną b
+      b--; // operator  inkrementacji, zmniejsza o  jeden zmieną b
+
+      //// operatory artmetyczne  jednoargumentowe//////
+
+      // są to  operatory inkrementacji i dekrementacji ++ i --
+
+      function printVar(data) {
+        console.log("wartość w funkcji:" + data);
+      }
+      let c = 1;
+
+      console.log("Przed wywołaniem:" + a);
+      printVar(a++); //Wartość funkcji zwiększamy o 1
+      console.log("Po wywołaiu:" + a);
+
+
+
+       //// operator porównania//////
+       // porównuje lewy operadn do prawegp 
+    9 == 3;//false
+    9 == 9;// true
+    9 != 3; // nie równa sie 3, true
+    9 != 9; //nie równa się 9, false 
+    2 < 7 ; // mniejsze- true
+    2 > 7 ; // wieksze - false 
+    5 <= 5; //mniejsze lub równe , true 
+    7 >= 8; // wieksze lub równe , false
+
+
+// zazwyczaj operatory porównania są wykożystywane z instrukcją if. 
+
+let a1 = 10, b1=6;
+if (a1 > b1) console.log("wykona się, 10 wieksze od 6");
+
+let c1 = 10, d1=6;
+if (c1 = d1) console.log("wykona się, 10 różne od 6");
+
+let e1 = 10, f1 = 6;
+if (e1 <= f1) console.log(" nie wykona się, e1 nie jest mniejsze lub równe 6 ");
+
+
+
+///Ścisłe porównanie- porównanie wartości i typu wartości
+// luźne porównanie różnych typów , number i strng 
+// string zostanie przekształcony na number, nastąpi konwersja
+
+if(5 =="5") console.log("true, ta sama wartość 5 ");
+
+//ścisłe porównanie 
+//  typy się nie zgadzają
+if(5 ==="5") console.log("false, różne typy string i number");
+
+// porównnie tych samych typów namber 
+if(5 ===5) console.log("true, ta sama wartość i typy  ");
+
+
+//// operatory porównania, a obiekty 
+
+if( 10 ==={a:10}) console.log("false")/// false- nie wykona się 
+
+
+
+
+
+////6:34
+    </script>
+  </body>
+</html>

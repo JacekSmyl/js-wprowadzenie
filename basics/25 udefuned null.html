@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//// Undefined//////
+
+        let a ; // zmienna jest zadeklarowana ale nie przypisana do wartości
+        console.log(a);// undefined- nie ma przypisanej wartości w zmiennej a
+        if(a==undefined) console.log("brak wartości");
+        
+        /*
+        b; 
+        błąd:
+        // Uncaught referenceError : b is not defined
+        //w praktyce zmienna b nie jest zadeklarowana przy użyciu 
+        // let, const lub var
+        */
+
+        console.log(typeof b);// undefined
+
+
+
+//// null////// słowo kluczowe- intencjonalne wskazanie że zmienna nie ma wartości.
+
+    let data = 20; // przypisana wartośc 10
+    data= null; // traz data nie ma wartości, jest null. 
+                //Kiedyś zmienna miała wartość ale teraz  już jej nie ma,
+                // wartość poprzednia mogła zostać skasowana.
+
+let test = 5;
+console.log(test); // 5
+ 
+test = null;
+console.log(test); // null
+
+
+console.log(typeof null); 
+
+
+    typeof null; // "object"
+        console.log(typeof null)// "object"
+
+
+    ///Przy konwersji null oraz undefined na typ bolean wartsoci staja sie false
+
+     if( null) console.log("nie wykona się");// nie ywkona się
+        if( undefined) console.log("nie wykona się");// nie wykona się 
+
+    
+    
+    
+    // porównanie  tylko wartości jeśli nie śa tego samego typu
+    // to będzie konwersja
+
+        if( null== undefined) { 
+            console.log("true, wykona się ")};//"true, wykona się" - 
+                                                //nie porównujemy typów
+        
+            
+
+    // poroównanie ścisłe === sprawdza również czy typy wartości sa te same
+    if( null=== undefined) {
+        console.log("false, nie wykona się ")}; 
+                            //  nie wykona się bo są 
+                            //dwa różne typy wartości " object" i "undefinded"
+
+
+
+///5:48 
+
+
+
+
+    </script>
+</body>
+</html>

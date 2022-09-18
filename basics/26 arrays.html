@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+//// Tablice////
+// tablice uporzadkowana kolekcja elemętów , nie są typem a obiektem
+// mogą przechowywać dowlne typy: proste i złożone
+//elementy sa uporzadkowane w postaci indeksów,
+/// każdy indeks to liczba całkowita, liczone są od 0
+
+let a=[]; // pusta tablica 
+let b = [22, "teks",{a:1}, [4, 5 ,6 ],  function(){}, null ] 
+///     liczba, tekst, obiekt , tablica, funkcja 
+// w tablicy moga być rózne elementy
+console.log(b);
+console.log(b[6])// undefined 
+console.log(b[b.length -1] )// odwołanie do ostatniego indeksu "null"
+console.log(b[0]);//  22 - pierwszy element na indeksie 0 
+
+b[2]= 99;// nadpisanie wartości indeksu  index 2 , wartość 99
+console.log(b);
+
+let c =new Array(12,"tekst",9)// tworzenie nowej tablicy
+console.log(c);
+
+let d= Array (1,2,3)// tworzac nową tablice można pominąć słowo "new"
+console.log(d);
+
+let e = [4,5,6,null]; // w praktyce pominaje jest slowo "new" 
+                        //i nazwa tablicy Array
+console.log(e);
+
+let f= [];
+f[0]="test1";
+f[1]="test2";
+f[6]="test3";
+f[f.length]= "test 4" // wstawianie osatniego elementu 
+f.push("test5")// wstania nowy element na końcu 
+console.log(f)
+
+
+
+let g = [0,1,2,3,4,5,6,7];
+console.log(g);
+g.length= 4; //obciecie do 4 elementóq 
+console.log(g);//[0,1,2,3] obcina ilości indeksów do wartości wskazanej 
+
+
+delete g[1];// usuwanie/kasowanie indeksu 1
+console.log(g); //wywołanie tablicy bez indexu 1  [ 0, <1 empty slot>, 2, 3 ]
+console.log(g[1]);// undefined
+
+//sprawdzanie czy indeks instnieje w tablicy 
+console.log(1 in g) //false, ponieważ indeks nie stnieje 1 
+console.log(2 in g) //true, ponieważ indeks nie stnieje 2 
+
+
+let h = Array(5).fill(7); // tworzenie tablicy 5 elemontowej  z wartościa 7 
+console.log(h);// [ 7, 7, 7, 7, 7 ]
+
+
+////// iteracja po tablicy /////////- przechodzzenie po elementach tablicy
+let h2 = [99, 56,45, "tekst"]
+
+for (let i = 0; i < h2.length; i++){
+console.log(h2[i]); // odwołujemy sie do każzdego indeksu tablicu 
+
+}
+
+///// forEach 
+
+let arr1 = ["eli1", "eli2","eli3","eli4", 88]
+
+arr1.forEach(function(item, index, array){
+    console.log( item, index);
+
+})
+///concat - łączenie elemetów  w tym tablic 
+
+let arr2  = arr1.concat([1,2,3]);
+console.log(arr2); // [ "eli1", "eli2", "eli3", "eli4", 88, 1, 2, 3 ]
+
+let arr3 = arr1.concat([2,3], [6,7,8,9])
+console.log(arr3); //[ "eli1", "eli2", "eli3", "eli4", 88, 2, 3, 6, 7, 8, 9 ]
+
+//// join- łączenie elementów
+let strFromArr = arr1.join(); //łączenie elementów tablicy na ciąg znakow
+console.log(strFromArr); /// li1,eli2,eli3,eli4,88
+
+let strFromArr2 = arr1.join("|");
+console.log(strFromArr2);
+
+let arr4 = [1,2,3,4];
+arr4.reverse()// odwracanie tablicy, modyfikuje oryginalna tablice
+console.log(arr4)///  [ 4, 3, 2, 1 ]
+
+let arrEl= arr4.pop();// pobiera ostatni element tablicy  i kasuje 
+console.log(arrEl)//1
+console.log(arr4) //[ 4, 3, 2 ]
+
+
+/// kurs 6:12 
+
+    </script>
+</body>
+</html>

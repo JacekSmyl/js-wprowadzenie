@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // string - inaczej zwany jest jako literały znakowe
+        //lub lliterały łąńcuchowe
+        // to ciąg znaków UTF-16
+
+        const s1= 'To jest tekst';
+        const s2 = "To też jest tekst";
+
+        const num = 5;
+        // literał szablonu- mozemy psać string w wielu liniach 
+        const s3 = `
+        String możey zapisać 
+        w wielu liniach  np :${num}
+        lub zapisywać wyrażenia js: ${1+2+3}`
+        ;
+console.log(s3)
+
+console.log("Tekst".length);// ilość znaków 5 
+console.log("".length);// ilość znaków 0 - brak tekstu
+
+console.log("tekst"[2]);// po indeksie powierzemy znak k 
+console.log( s3[s3.length - 1]);// 6
+
+console.log( s3.charAt(17));// o
+
+console.log( s3.charCodeAt(17));// 111 kod Unicode dla o.Sprawdzenie numeru unicode danego znaku
+
+// wyszukiwanie słów w tekście 
+let simpleText = "Ala ma kot a Ania ma psa";
+let pos = simpleText.indexOf("Ania");
+console.log(pos); // słowo Ania jest pod 13 indeksem od początku
+
+
+pos = simpleText.lastIndexOf("ma");
+console.log(pos) // słowo ma znajduje się na 18 indeksie od konca 
+
+// drugi argument od którego miejsca ma być wyszukiwanie
+
+pos = simpleText.indexOf("ma",8) 
+console.log(pos);// 18
+
+pos = simpleText.lastIndexOf("ma", 5)
+console.log(pos);//4 
+
+
+// trim() - metoda wycina białe znaki z poczatku i końca łańcucha
+
+console.log("  Tekst dla przykładu  ". trim());
+console.log(`
+
+przykładu
+`.trim()); 
+
+// toUpperCase()
+console.log("ala".toUpperCase()); //ALA
+
+// toLowerCase
+console.log("TOMEK".toLocaleLowerCase());// tomek
+
+// łączenie łańcuchów znaków 
+
+const str1 = " something";
+const resultStr = "text" + str1;
+console.log(resultStr)// text something
+
+// Pobieranie fragmętów string slice(), sunstr()
+let str5 = "0123456789";
+console.log( str5.slice(2))// od drugiego indeksu 23456789
+console.log(str5.slice(4, 8))//4567
+console.log(str5.slice(4, 9))//45678
+console.log(str5.slice(-3,-1))//78 liczone od końca
+console.log(str5.slice(-5,-4))//5
+console.log(str5.slice(-6, -2))//4567
+console.log(str5.slice(5))//56789
+
+console.log(str5.substr(0))//0123456789
+console.log(str5.substr(5))//056789
+console.log(str5.substr(-7, 2 ))
+
+// split() dzieli tablicę ze wzgdu na przekazany znak, zwraca tablice
+
+let str6 = " a1 b2 c3 d4 e";
+let dataStr6 = str6.split("");
+console.log(dataStr6);
+
+//replace() zastepuje słowa w stringu 
+
+let str7= "Ala ma kota";
+let str8 = str7.replace("kota", "psa");
+console.log(str8);// zmieniono kota na psa - Ala ma psa
+
+// mutowalność vs niemutowalność
+//w JS tylko tablive i obiekty są mutiwalne czyli mogą być zmienne 
+// Prymitywy jaki i String moga przyjmować różne wartości , 
+//ale przy każdej zmianie otrzymujemy nową wartość 
+
+let str9 = "Tekst";
+str9[0] = "A"
+console.log(str9);// tekst, string i inne przymitywne  są niemutowalne
+// aby zmienić wartośc w stringu nareży użyć  replace()
+
+let str10 = str9.replace("T", "A");
+console.log(str10); // Aekst
+
+
+// tablica jest mutowalna podobnie jak obiekty 
+// przy zmianie wartości nie wpowstje nowy obekt tylko
+//modyfikowany jest juz istniejący
+
+//tablica
+let arr = ["T","E","K","S","T"];
+arr[0]= "A";
+console.log(arr);
+
+// obiekt
+let obj ={ a:1};
+obj.a = 7;
+console.log(obj);
+
+    </script>
+</body>
+</html>

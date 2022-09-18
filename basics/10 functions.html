@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //a, b,- dowolna ilość zmiennych
+      //c= zmienna lokalna gdzie zapisaywany jest wynik
+
+      function add(a, b) {
+        let c = a + b;
+        console.log("wynik:", c);
+      }
+      add(8, 3);
+      add(20, 15);
+      add(200, 15);
+
+      let x = 10;
+      let y = 45;
+      if (x > 5) {
+        add(x, y);
+      }
+
+      // Funkcja mnożenia -Definicja funkcji
+      // nazwa = multiplay
+      //parametry funkci a oraz b
+
+      function multiplay(a, b) {
+        return a * b;
+      }
+
+      // z punnktu widzenia wywołania funkcji liczby 15 i 4 to argumenty funkcji
+
+      let result = multiplay(15, 4);
+      console.log("result:", result);
+
+      //Wyrażenie funkcyjne -functionexpression
+      // dzielenie -division
+      let division = function (a, b) {
+        return a / b;
+      };
+      
+      let divisionResult = division(100, 5);
+      console.log("wynik dzielenia:", divisionResult);
+
+      let data = 55; // zmienna globalna dostepna ww całym programie js
+      let text = "JavaScript"
+
+      function test() {
+        let text = "Hello "; // zmienna lokalna widoczna tylko w wewnątrz naszej funkcji 
+        console.log("wartośc data:", data);
+        console.log("wartośc text:", text)
+      }
+     test();
+     console.log(text)
+
+    </script>
+  </body>
+</html>
